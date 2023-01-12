@@ -82,9 +82,9 @@
 
 
 
-                    <div class="listaContatti">
+                    <div id="contatti" class="listaContatti" >
 
-                        <div class="chatContatto my-3 mx-3 pb-2 d-flex">
+                        <div class="chatContatto my-3 mx-3 pb-2 d-flex" v-for="">
                             <div class="imgTonde d-flex">
                                 <img class="img-fluid" src="img/avatar_1.jpg" alt="">
                                 
@@ -101,7 +101,7 @@
 
                 <div class="col-8 px-0 h-100">
 
-                    <div class="utente d-flex align-items-center">
+                    <div class="utente d-flex align-items-center justify-content-between p-2">
                         <div class="chatContatto border-0 px-2 d-flex align-items-center">
                             <div class="imgTonde">
                                 <img class="img-fluid" src="img/avatar_1.jpg" alt="">
@@ -110,6 +110,18 @@
                             <div class="utentePersonale mx-2 d-flex justify-content-center flex-column">
                                 <h5 class="m-0">Michele</h5>
                                 <p class="text-secondary m-0">Ultimo accesso oggi alle</p>
+                            </div>
+                        </div>
+
+                        <div class="iconeNomeUtente d-flex justify-content-end">
+                            <div class="iconaCerca m-2">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="iconaAllega m-2">
+                                <i class="fa-solid fa-paperclip"></i>
+                            </div>
+                            <div class="iconaMenu1 m-2">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
                     </div>
