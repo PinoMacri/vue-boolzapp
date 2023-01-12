@@ -1,0 +1,143 @@
+/*! --- GENERAL --- */
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: linear-gradient(to top, #DCDBD6 85%, #02968A 15% );
+    height: 100vh;
+}
+
+#base-working {
+    height: 100%;
+}
+#web-app{
+    height: 90vh;
+}
+/*! --- UTILITIES --- */
+h5 {
+    font-size: 16px;
+    color: black;
+}
+i {
+    font-size: 25px;
+    color: gray;
+}
+i:hover {
+    cursor: pointer;
+}
+input {
+    border: 0px;
+}
+.imgTonde {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.imgTonde > img {
+    border-radius: 50%;
+}
+p.m-0:hover {
+    cursor: pointer;
+}
+/*! --- WEB APP --- */
+/*^ */
+.nomeUtente {
+    height: 7%;
+    background-color: #EBE9EC;
+    border-right: 1px solid rgb(207, 207, 207);
+}
+.iconeNomeUtente {
+    width: 40%;
+}
+
+
+
+
+
+.notifiche {
+    height: 10%;
+    background-color: #90D9FC;
+}
+.campanella i {
+    color: #90D9FC ;
+}
+
+
+
+
+
+.cercaChat {
+    height: 5%;
+    background-color: #FAFAFA;
+}
+.cercaChat > label {
+height: 75%;
+border-radius: 10px 0px 0px 10px;
+}
+label > i {
+    font-size: 20px;
+}
+.search {
+    width: 80%;
+    height: 75%;
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+
+
+.listaContatti {
+    height: 78% ;
+    overflow-y: scroll;
+    background-color: #FEFEFE;
+}
+.chatContatto {
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+
+
+
+
+
+.utente {
+    height: 7%;
+    background-color: #EBE9EC;
+}
+.utentePersonale {
+    width: 400px;
+}
+
+
+
+
+
+
+
+.paginaChat {
+    height: 86%;
+    overflow-y: scroll;
+    background-image: url("../img/mine.jpg");
+}
+
+.chat {
+    height: 7%;
+    background-color: #F6EEEB ;
+}
+.iconaEmoticon {
+    width: 10%;
+}
+.chatMsg {
+    width: 80%;
+}
+.chatMsg input {
+    width: 97%;
+}
+.scriviMsg {
+    height: 80% ;
+    border-radius: 20px;
+}
+.scriviMsg::placeholder {
+    padding: 20px;
+}
+.iconaVocale {
+    width: 10%;
+}
