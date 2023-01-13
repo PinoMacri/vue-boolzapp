@@ -22,7 +22,7 @@ const data = {
                   avatar: 'img/avatar_3.jpg',
                 },
                 {
-                  name: 'Luisa',
+                  name: 'Carletto',
                   avatar: 'img/avatar_4.jpg',
                 },
                 {
@@ -30,11 +30,11 @@ const data = {
                     avatar: 'img/avatar_5.jpg',
                   },
                   {
-                    name: 'Asdrubale',
+                    name: 'Asdrubala',
                     avatar: 'img/avatar_6.jpg',
                   },
                   {
-                    name: 'Viviana',
+                    name: 'Viviano',
                     avatar: 'img/avatar_7.jpg',
                   },
                   {
@@ -42,11 +42,11 @@ const data = {
                     avatar: 'img/avatar_8.jpg',
                   },
                   {
-                    name: 'Trottolino',
+                    name: 'Anselma',
                     avatar: 'img/avatar_io.jpg',
                   },
                   {
-                    name: 'Trottolina',
+                    name: 'Trottolino',
                     avatar: 'img/avatar_1.jpg',
                   },
                   {
@@ -54,15 +54,15 @@ const data = {
                     avatar: 'img/avatar_8.jpg',
                   },
                   {
-                    name: 'Ciccio',
+                    name: 'Ciccia',
                     avatar: 'img/avatar_io.jpg',
                   },
                   {
-                    name: 'Pocahontas',
+                    name: 'Ugo',
                     avatar: 'img/avatar_1.jpg',
                   },
               ]
-              
+
         }
     }
   })
