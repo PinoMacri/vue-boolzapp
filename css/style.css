@@ -50,8 +50,13 @@ img,
 h5:hover {
     cursor: pointer;
 }
-
-
+p {
+    margin: 0;
+}
+time {
+    font-size: 10px;
+    color: gray;
+}
 
 
 
@@ -59,8 +64,15 @@ h5:hover {
     background-color: #D9FDD3;
     text-align: right;
     margin-top: 20px;
-    padding: 20px;
+    padding: 15px;
     border-radius: 30px;
+    min-width: 400px;
+}
+.msgScrittiUtente p {
+    text-align: left;
+}
+.msgScrittiUtente time {
+    float: right;
 }
 
 
@@ -69,12 +81,18 @@ h5:hover {
 
 .msgScrittiPc {
     background-color: #FFFFFF;
-    text-align: right;
+    text-align: left;
     margin-top: 20px;
-    padding: 20px;
+    padding: 15px;
     border-radius: 30px;
+    min-width: 400px;
 }
-
+.msgScrittiPc p {
+    text-align: left;
+}
+.msgScrittiPc time {
+    float: right;
+}
 /*! --- WEB APP --- */
 /*^ */
 .nomeUtente {
