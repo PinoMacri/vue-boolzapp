@@ -44,11 +44,11 @@
                         <div class="d-flex align-items-center">
                             <!-- Immagine Nome Utente -->
                             <div class="imgUtente imgTonde d-flex">
-                                <img class="img-fluid" src="img/avatar_io.jpg" alt="">
+                                <img class="img-fluid" src="img/115465462.png" alt="">
                             </div>
                             <!-- "Nome" del Nome Utente -->
                             <div class="pNomeUtente">
-                                <h5 class="m-0 px-2">Pinetta</h5>
+                                <h5 class="m-0 px-2">Pino</h5>
                             </div>
                         </div>
 
@@ -96,7 +96,7 @@
 
                         <!-- Barra di Ricerca -->
                         <input class="search " type="text" name="" id="ricerca"
-                            placeholder="Cerca o inizia una nuova chat">
+                         v-model="searchUser"   placeholder="Cerca o inizia una nuova chat">
 
                     </div>
                     <!--~...................................................................................-->
@@ -104,10 +104,13 @@
                     <div id="contatti" class="listaContatti">
 
                         <!-- Div Padre Immagine & Nome, Chat & Ciclo -->
-                        <div class="chatContatti  p-2 d-flex" v-for="contact in contacts">
+                        <div v-for="(contact,i) in filteredNames"
+                            :class="i===currentIndex ? 'bck-Chat chatContatti p-2 d-flex' : 'chatContatti p-2 d-flex'"
+                            @click="currentIndex=i">
+
                             <!-- Immagine contatti -->
                             <div class="imgTonde d-flex">
-                                <img class="img-fluid" :src="contact.avatar" alt="">
+                                <img class="img-fluid" :src="'img/avatar'+contact.avatar+'.jpg'" alt="">
                             </div>
 
                             <!-- Nome contatti -->
@@ -133,13 +136,21 @@
                         <div class="chatContatto border-0 px-2 d-flex align-items-center">
                             <!-- Immagine Interlocutore -->
                             <div class="imgTonde">
-                                <img class="img-fluid" src="img/avatar_1.jpg" alt="">
+                                <img v-for="(contact, i) in contacts"
+                                    v-bind:class="i === currentIndex ? 'active' : 'd-none' "
+                                    v-bind:src="'img/avatar'+contact.avatar+'.jpg'" alt="">
                             </div>
 
                             <!-- Nome & Accesso Interlocutore -->
                             <div class="utentePersonale mx-2 d-flex justify-content-center flex-column">
-                                <h5 class="m-0">Michele</h5>
-                                <p class="text-secondary m-0">Ultimo accesso oggi alle 15:36</p>
+                                <h5 v-for="(contact, i) in contacts"
+                                    v-bind:class="i === currentIndex ? 'active m-0' : 'd-none m-0' ">
+                                    {{contact.name}}
+                                </h5>
+                                <p v-for="(contact, i) in contacts"
+                                    v-bind:class="i === currentIndex ? 'active text-secondary m-0' : 'd-none text-secondary m-0' ">
+                                    {{contact.lastAccess}}
+                                </p>
                             </div>
                         </div>
 
@@ -164,27 +175,19 @@
                     <!--*.... Pagina Chat ....-->
                     <div class="paginaChat ">
 
-                        <!-- Div Padre Messaggi Utente -->
-                        <div class="d-flex flex-column align-items-end px-5">
-                            <div class="msgScritti bck-Utente text-right">
-                                <p>Ciao Michele, oggi non posso uscire</p>
-                                <time>10:00</time>
-                            </div>
-                            <div class="msgScritti bck-Pc text-right">
-                                <p> Ho un appuntamento</p>
-                                <time>10:02</time>
-                            </div>
-                        </div>
-
-                        <!-- Div Padre Messaggi PC -->
-                        <div class="d-flex flex-column align-items-start px-5">
-                            <div class="msgScritti bck-Pc text-left">
-                                <p>Va bene</p>
-                                <time>10:05</time>
-                            </div>
-                            <div class="msgScritti bck-Pc text-left">
-                                <p>Buon Divertimento</p>
-                                <time>10:07</time>
+                        <!-- Div Padre Messaggi  -->
+                        <div class=" px-5">
+                            <div class="mt-5">
+                                <div v-for="(message,i) in contacts[currentIndex].messages"
+                                    v-bind:class="message.status==='sent' ? 'div-Utente' : 'div-Pc'">
+                                    <p v-bind:class="message.status==='sent' ? 'bck-Utente' : 'bck-Pc'">
+                                        {{message.text}}
+                                        <br>
+                                        <time>
+                                            {{message.date}}
+                                        </time>
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
@@ -200,7 +203,7 @@
                         </div>
                         <!-- Barra Chat -->
                         <div class="chatMsg d-flex align-items-center justify-content-center">
-                            <input class="scriviMsg" type="text" name="" id="" placeholder="Scrivi un messaggio . .">
+                            <input v-model.trunt="dinamicMsg" v-on:keyup.enter="addMsg(currentIndex)" class="scriviMsg" type="text" name="" id="" placeholder="Scrivi un messaggio . .">
                         </div>
                         <!-- Microfono -->
                         <div class="iconaVocale d-flex align-items-center justify-content-center">
@@ -208,12 +211,12 @@
                         </div>
 
                     </div>
-                     <!--~...................................................................................-->
+                    <!--~...................................................................................-->
                 </div>
             </div>
         </div>
     </div>
-      <!--! .............................................FINE WEB APP............................................. -->
+    <!--! .............................................FINE WEB APP............................................. -->
     <!-- Vue JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </body>

@@ -41,6 +41,11 @@ time {
     font-size: 10px;
     color: gray;
 }
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /*!........ CENTRALIZZAZIONE UTILITIES ........*/
 /*.....Immagini..... */
 .imgTonde {
@@ -51,24 +56,39 @@ time {
 .imgTonde>img {
     border-radius: 50%;
 }
+.active {
+    display: block;
+}
+.none {
+    display: none;
+}
 /*.....Messaggi Chat Utente & PC..... */
-.msgScritti {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 30px;
-    min-width: 200px;
-}
-.msgScritti p {
-    text-align: left;
-}
-.msgScritti time {
-    float: right;
-}
 .bck-Utente {
     background-color: #D9FDD3;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: right;
+    display: inline-block ;
+}
+.div-Utente {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 10px;
 }
 .bck-Pc {
     background-color: #FFFFFF; 
+    padding: 10px;
+    border-radius: 10px;
+}
+.div-Pc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.bck-Chat {
+    background-color: rgb(204, 204, 204);
 }
 /*!.................................. WEB APP ..................................*/
 /*^.......................ROW GENERALE WEB APP........................ */
@@ -102,6 +122,9 @@ time {
 .cercaChat>label {
     height: 75%;
     border-radius: 10px 0px 0px 10px;
+}
+label {
+    background-color: white;
 }
 label>i {
     font-size: 20px;
