@@ -29,147 +29,191 @@
 </head>
 
 <body>
+    <!-- Pagina -->
     <div id="base-working" class=" d-flex justify-content-center align-items-center w-100">
+        <!--! ...............................................WEB APP............................................... -->
         <div class="container" id="web-app">
+            <!--^ .....................................ROW GENERALE WEB APP...................................... -->
             <div class="row h-100">
+                <!--^ ...................................PRIMA COLONNA WEB APP................................... -->
                 <div class="col-4 h-100 px-0">
-
+                    <!--* .... Nome Utente ....-->
                     <div class="nomeUtente px-2 d-flex align-items-center justify-content-between">
+
+                        <!-- Div Padre Immagine & Nome -->
                         <div class="d-flex align-items-center">
+                            <!-- Immagine Nome Utente -->
                             <div class="imgUtente imgTonde d-flex">
                                 <img class="img-fluid" src="img/avatar_io.jpg" alt="">
                             </div>
-
+                            <!-- "Nome" del Nome Utente -->
                             <div class="pNomeUtente">
                                 <h5 class="m-0 px-2">Pinetta</h5>
                             </div>
                         </div>
 
+                        <!-- Div Padre Icone -->
                         <div class="iconeNomeUtente d-flex justify-content-end">
+                            <!-- Icona Aggiorna -->
                             <div class="iconaAggiorna m-2">
                                 <i class="fa-solid fa-circle-notch"></i>
                             </div>
+                            <!-- Icona Chat -->
                             <div class="iconaChat m-2">
                                 <i class="fa-solid fa-message"></i>
                             </div>
+                            <!-- Icona Menù -->
                             <div class="iconaMenu1 m-2">
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
+                    <!--~...................................................................................-->
+                    <!--*.... Notifiche ....-->
                     <div class="notifiche d-flex align-items-center">
+
+                        <!-- Campanella -->
                         <div class="campanella mx-3 imgTonde bg-white d-flex justify-content-center align-items-center">
                             <i class="fa-solid fa-bell-slash"></i>
                         </div>
 
+                        <!-- Messaggio Notifica-->
                         <div class="msgNotifiche">
                             <h5 class="m-0">Ricevi notifiche di nuovi messaggi</h5>
                             <p class="m-0"><u>Attiva notifiche desktop</u></p>
                         </div>
+
                     </div>
-
-
-
+                    <!--~...................................................................................-->
+                    <!--*.... Barra di Ricerca Chat ....-->
                     <div class="cercaChat d-flex justify-content-center align-items-center">
+
+                        <!-- Icona di Ricerca -->
                         <label class=" d-flex align-items-center justify-content-center" for="ricerca">
                             <i class="p-3 fa-solid fa-magnifying-glass"></i>
                         </label>
+
+                        <!-- Barra di Ricerca -->
                         <input class="search " type="text" name="" id="ricerca"
                             placeholder="Cerca o inizia una nuova chat">
+
                     </div>
-
-
-
-
+                    <!--~...................................................................................-->
+                    <!--*.... Lista Contatti ....-->
                     <div id="contatti" class="listaContatti">
 
-                        <div class="chatContatto my-3 mx-3 pb-2 d-flex" v-for="contact in contacts">
+                        <!-- Div Padre Immagine & Nome, Chat & Ciclo -->
+                        <div class="chatContatti  p-2 d-flex" v-for="contact in contacts">
+                            <!-- Immagine contatti -->
                             <div class="imgTonde d-flex">
                                 <img class="img-fluid" :src="contact.avatar" alt="">
-
                             </div>
+
+                            <!-- Nome contatti -->
                             <div class="mx-2">
                                 <h5>{{contact.name}}</h5>
+                                <div class="ultimoAccesso d-flex align-items-center justify-content-between w-100">
+                                    <p>Ultimo messaggio inviato</p>
+                                    <time>10:05</time>
+                                </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
+                <!--~...................................................................................-->
 
-
-
+                <!--^ ..................................SECONDA COLONNA WEB APP.................................. -->
                 <div class="col-8 px-0 h-100">
-
+                    <!--*.... Utente Interlocutore ....-->
                     <div class="utente d-flex align-items-center justify-content-between p-2">
+
+                        <!-- Div Padre immagine & Nome/Accesso Interlocutore -->
                         <div class="chatContatto border-0 px-2 d-flex align-items-center">
+                            <!-- Immagine Interlocutore -->
                             <div class="imgTonde">
                                 <img class="img-fluid" src="img/avatar_1.jpg" alt="">
-
                             </div>
+
+                            <!-- Nome & Accesso Interlocutore -->
                             <div class="utentePersonale mx-2 d-flex justify-content-center flex-column">
                                 <h5 class="m-0">Michele</h5>
                                 <p class="text-secondary m-0">Ultimo accesso oggi alle 15:36</p>
                             </div>
                         </div>
 
+                        <!-- Div Padre Icone -->
                         <div class="iconeNomeUtente d-flex justify-content-end">
+                            <!-- Icona Ricerca -->
                             <div class="iconaCerca m-2">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
+                            <!-- Icona Allega -->
                             <div class="iconaAllega m-2">
                                 <i class="fa-solid fa-paperclip"></i>
                             </div>
+                            <!-- Icona Menù -->
                             <div class="iconaMenu1 m-2">
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
+                    <!--~...................................................................................-->
+                    <!--*.... Pagina Chat ....-->
                     <div class="paginaChat ">
 
+                        <!-- Div Padre Messaggi Utente -->
                         <div class="d-flex flex-column align-items-end px-5">
-                            <div class="msgScrittiUtente">
+                            <div class="msgScritti bck-Utente text-right">
                                 <p>Ciao Michele, oggi non posso uscire</p>
                                 <time>10:00</time>
                             </div>
-                            <div class="msgScrittiUtente">
+                            <div class="msgScritti bck-Pc text-right">
                                 <p> Ho un appuntamento</p>
                                 <time>10:02</time>
                             </div>
                         </div>
 
+                        <!-- Div Padre Messaggi PC -->
                         <div class="d-flex flex-column align-items-start px-5">
-                            <div class="msgScrittiPc">
-                               <p>Va bene</p>
+                            <div class="msgScritti bck-Pc text-left">
+                                <p>Va bene</p>
                                 <time>10:05</time>
                             </div>
-                            <div class="msgScrittiPc">
-                               <p>Buon Divertimento</p>
+                            <div class="msgScritti bck-Pc text-left">
+                                <p>Buon Divertimento</p>
                                 <time>10:07</time>
                             </div>
                         </div>
 
-
                     </div>
-
-
+                    <!--~...................................................................................-->
+                    <!--*.... Barra Chat ....-->
+                    <!-- Div Padre Emoticon, Barra Chat, Microfono -->
                     <div class="chat d-flex">
+
+                        <!-- Emoticon -->
                         <div class="iconaEmoticon d-flex align-items-center justify-content-center">
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
+                        <!-- Barra Chat -->
                         <div class="chatMsg d-flex align-items-center justify-content-center">
                             <input class="scriviMsg" type="text" name="" id="" placeholder="Scrivi un messaggio . .">
                         </div>
+                        <!-- Microfono -->
                         <div class="iconaVocale d-flex align-items-center justify-content-center">
                             <i class="fa-solid fa-microphone"></i>
                         </div>
+
                     </div>
+                     <!--~...................................................................................-->
                 </div>
             </div>
-
         </div>
     </div>
+      <!--! .............................................FINE WEB APP............................................. -->
     <!-- Vue JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </body>

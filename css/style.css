@@ -1,51 +1,35 @@
-/*! --- GENERAL --- */
+/*!........ GENERALE TAG FUNCTIONS ........*/
+/*.....Body..... */
 body {
     font-family: 'Red Hat Display', sans-serif;
     background-image: linear-gradient(to top, #DCDBD6 85%, #02968A 15%);
     height: 100vh;
 }
-
+/*.....Sezioni..... */
 #base-working {
     height: 100%;
 }
-
 #web-app {
     height: 90vh;
 }
-
-/*! --- UTILITIES --- */
+/*.....Tag Generali & Hover Generali..... */
 h5 {
     font-size: 16px;
     color: black;
 }
-
 i {
     font-size: 25px;
     color: gray;
 }
-
 i:hover {
     cursor: pointer;
 }
-
 input {
     border: 0px;
 }
-
-.imgTonde {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-}
-
-.imgTonde>img {
-    border-radius: 50%;
-}
-
 p.m-0:hover {
     cursor: pointer;
 }
-
 img,
 h5:hover {
     cursor: pointer;
@@ -57,160 +41,139 @@ time {
     font-size: 10px;
     color: gray;
 }
-
-
-
-.msgScrittiUtente {
+/*!........ CENTRALIZZAZIONE UTILITIES ........*/
+/*.....Immagini..... */
+.imgTonde {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.imgTonde>img {
+    border-radius: 50%;
+}
+/*.....Messaggi Chat Utente & PC..... */
+.msgScritti {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 30px;
+    min-width: 200px;
+}
+.msgScritti p {
+    text-align: left;
+}
+.msgScritti time {
+    float: right;
+}
+.bck-Utente {
     background-color: #D9FDD3;
-    text-align: right;
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 30px;
-    min-width: 400px;
 }
-.msgScrittiUtente p {
-    text-align: left;
+.bck-Pc {
+    background-color: #FFFFFF; 
 }
-.msgScrittiUtente time {
-    float: right;
-}
-
-
-
-
-
-.msgScrittiPc {
-    background-color: #FFFFFF;
-    text-align: left;
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 30px;
-    min-width: 400px;
-}
-.msgScrittiPc p {
-    text-align: left;
-}
-.msgScrittiPc time {
-    float: right;
-}
-/*! --- WEB APP --- */
-/*^ */
+/*!.................................. WEB APP ..................................*/
+/*^.......................ROW GENERALE WEB APP........................ */
+/*^.......................PRIMA COLONNA WEB APP....................... */
+/**.....Nome Utente..... */
 .nomeUtente {
     height: 7%;
     background-color: #EBE9EC;
     border-right: 1px solid rgb(207, 207, 207);
 }
-
+/*.....icone nome utente..... */
 .iconeNomeUtente {
     width: 40%;
 }
-
-
-
-
-
+/*~...................................... */
+/**.....Notifiche..... */
 .notifiche {
     height: 10%;
     background-color: #90D9FC;
 }
-
+/*.....icona campanella..... */
 .campanella i {
     color: #90D9FC;
 }
-
-
-
-
-
+/*~...................................... */
+/**.....Barra di Ricerca Chat..... */
 .cercaChat {
     height: 5%;
     background-color: #FAFAFA;
 }
-
 .cercaChat>label {
     height: 75%;
     border-radius: 10px 0px 0px 10px;
 }
-
 label>i {
     font-size: 20px;
 }
-
 .search {
     width: 80%;
     height: 75%;
     border-radius: 0px 10px 10px 0px;
 }
-
-
-
-
+/*~...................................... */
+/**.....Lista Contatti..... */
 .listaContatti {
     height: 78%;
     overflow-y: scroll;
     background-color: #FEFEFE;
 }
-
-.chatContatto {
+.chatContatto,.chatContatti {
     border-bottom: 1px solid rgb(207, 207, 207);
 }
-
-.chatContatto:hover {
+.chatContatti:hover {
     cursor: pointer;
+    background-color: rgb(204, 204, 204);
 }
+.ultimoAccesso p {
+    margin-right: 170px ;
+    color: gray;
+    font-size: 13px;
+}
+/*~..................................................................... */
 
-
-
-
-
-
+/*^.......................SECONDA COLONNA WEB APP....................... */
+/**.....Utente Interlocutore..... */
 .utente {
     height: 7%;
     background-color: #EBE9EC;
 }
-
 .utentePersonale {
     width: 400px;
 }
-
-
-
-
-
-
-
+/*~...................................... */
+/**.....Pagina Chat..... */
 .paginaChat {
     height: 86%;
     overflow-y: scroll;
     background-image: url("../img/mine.jpg");
 }
-
+/*~...................................... */
+/**.....Barra Chat..... */
 .chat {
     height: 7%;
     background-color: #F6EEEB;
 }
-
+/*.....icona emoticon..... */
 .iconaEmoticon {
     width: 10%;
 }
-
+/*.....barra chat..... */
 .chatMsg {
     width: 80%;
 }
-
 .chatMsg input {
     width: 97%;
 }
-
 .scriviMsg {
     height: 80%;
     border-radius: 20px;
 }
-
 .scriviMsg::placeholder {
     padding: 20px;
 }
-
+/*.....icona vocale..... */
 .iconaVocale {
     width: 10%;
 }
+/*!.................................. FINE WEB APP ..................................*/
