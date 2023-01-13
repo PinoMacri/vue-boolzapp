@@ -84,13 +84,13 @@
 
                     <div id="contatti" class="listaContatti" >
 
-                        <div class="chatContatto my-3 mx-3 pb-2 d-flex" v-for="">
+                        <div class="chatContatto my-3 mx-3 pb-2 d-flex" v-for="contact in contacts">
                             <div class="imgTonde d-flex">
-                                <img class="img-fluid" src="img/avatar_1.jpg" alt="">
+                                <img class="img-fluid" :src="contact.avatar" alt="">
                                 
                             </div>
                             <div class="mx-2">
-                                <h5>Michele</h5>
+                                <h5>{{contact.name}}</h5>
                             </div>
                         </div>
 

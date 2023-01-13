@@ -11,21 +11,58 @@ const data = {
             contacts: [
                 {
                   name: 'Michele',
-                  avatar: '_1',
+                  avatar: 'img/avatar_1.jpg',
                 },
                 {
                   name: 'Fabio',
-                  avatar: '_2',
+                  avatar: 'img/avatar_2.jpg',
                 },
                 {
                   name: 'Samuele',
-                  avatar: '_3',
+                  avatar: 'img/avatar_3.jpg',
                 },
                 {
                   name: 'Luisa',
-                  avatar: '_4',
+                  avatar: 'img/avatar_4.jpg',
                 },
+                {
+                    name: 'Gelsomino',
+                    avatar: 'img/avatar_5.jpg',
+                  },
+                  {
+                    name: 'Asdrubale',
+                    avatar: 'img/avatar_6.jpg',
+                  },
+                  {
+                    name: 'Viviana',
+                    avatar: 'img/avatar_7.jpg',
+                  },
+                  {
+                    name: 'Pierino',
+                    avatar: 'img/avatar_8.jpg',
+                  },
+                  {
+                    name: 'Trottolino',
+                    avatar: 'img/avatar_io.jpg',
+                  },
+                  {
+                    name: 'Trottolina',
+                    avatar: 'img/avatar_1.jpg',
+                  },
+                  {
+                    name: 'Sandokan',
+                    avatar: 'img/avatar_8.jpg',
+                  },
+                  {
+                    name: 'Ciccio',
+                    avatar: 'img/avatar_io.jpg',
+                  },
+                  {
+                    name: 'Pocahontas',
+                    avatar: 'img/avatar_1.jpg',
+                  },
               ]
+              
         }
     }
   })
