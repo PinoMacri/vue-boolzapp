@@ -100,7 +100,7 @@
 
                         <!-- Div Padre Immagine & Nome, Chat & Ciclo -->
                         <div v-for="(contact,i) in filteredNames"
-                            :class="i===currentIndex ? 'bck-Chat chatContatti p-2 d-flex' : 'chatContatti p-2 d-flex'"
+                            :class="contact.id===currentIndex ? 'bck-Chat chatContatti p-2 d-flex' : 'chatContatti p-2 d-flex'"
                             @click="currentIndex=contact.id">
 
                             <!-- Immagine contatti -->
