@@ -21,6 +21,7 @@ const app = Vue.createApp({
             contacts: [
                 {
                     name: 'Michele',
+                    id:0,
                     avatar: '_1',
                     lastAccess: 'Ultimo accesso oggi alle 15:36',
                     visible: true,
@@ -43,6 +44,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Fabio',
+                    id:1,
                     avatar: '_2',
                     lastAccess: 'Ultimo accesso oggi alle 11:55',
                     visible: true,
@@ -65,6 +67,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Samuele',
+                    id:2,
                     avatar: '_3',
                     lastAccess: 'Ultimo accesso oggi alle 14:28',
                     visible: true,
@@ -87,6 +90,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Luisa',
+                    id:3,
                     avatar: '_4',
                     lastAccess: 'Ultimo accesso oggi alle 10:59',
                     visible: true,
@@ -104,6 +108,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Gelsomino',
+                    id:4,
                     avatar: '_5',
                     lastAccess: 'Ultimo accesso oggi alle 08:57',
                     messages: [
@@ -161,6 +166,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Asdrubala',
+                    id:5,
                     avatar: '_6',
                     lastAccess: 'Ultimo accesso oggi alle 20:30',
                     visible: true,
@@ -178,6 +184,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Lello',
+                    id:6,
                     avatar: '_7',
                     lastAccess: 'Ultimo accesso oggi alle 20:30',
                     visible: true,
@@ -195,6 +202,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Pierino',
+                    id:7,
                     avatar: '_8',
                     lastAccess: 'Ultimo accesso oggi alle 21:38',
                     visible: true,
@@ -212,6 +220,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Anselma',
+                    id:8,
                     avatar: '_io',
                     lastAccess: 'Ultimo accesso oggi alle 22:29',
                     visible: true,
@@ -229,6 +238,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Trottolino',
+                    id:9,
                     avatar: '_1',
                     lastAccess: 'Ultimo accesso oggi alle 05:30',
                     visible: true,
@@ -246,6 +256,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Sandokan',
+                    id:10,
                     avatar: '_8',
                     lastAccess: 'Ultimo accesso oggi alle 00:02',
                     visible: true,
@@ -263,6 +274,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Ciccia',
+                    id:11,
                     avatar: '_io',
                     lastAccess: 'Ultimo accesso oggi alle 12:44',
                     visible: true,
@@ -280,6 +292,7 @@ const app = Vue.createApp({
                 },
                 {
                     name: 'Ugo',
+                    id:12,
                     avatar: '_1',
                     lastAccess: 'Ultimo accesso oggi alle 19:26',
                     visible: true,
@@ -324,6 +337,7 @@ const app = Vue.createApp({
         filteredNames(){
             return this.contacts.filter(contact => {
                 return contact.name.toLowerCase().includes(this.searchUser.toLowerCase());
+
             })
         }
     }
