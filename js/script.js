@@ -319,6 +319,7 @@ const app = Vue.createApp({
                 text: this.dinamicMsg,
                 status: "sent",
             };
+            if (!this.dinamicMsg) return;
             const newMsgPc = {
                 date: '10/01/2020 15:50:00',
                 text: "ok",
